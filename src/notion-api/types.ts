@@ -201,4 +201,8 @@ export interface NotionSearchResultsType {
   total: number;
 }
 
-export type HandlerRequest = Context;
+export type Env = {
+  NOTION_TOKEN?: string;
+};
+
+export type HandlerRequest = Context<{ Bindings: Env }>;
